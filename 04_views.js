@@ -23,26 +23,25 @@ const intro = babeViews.intro({
     trials: 1,
     name: 'intro',
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-    text:   `This is a sample introduction view.
+    text:   `Welcome to the experiment on mental rotation
             <br />
             <br />
-            The introduction view welcomes the participant and gives general information
-            about the experiment. You are in the <strong>${coin}</strong> group.
-            <br />
-            <br />
-            This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
+            
+            Your data will be stored anonymous `,
    buttonText: 'Begin the experiment'
 });
 
 // For most tasks, you need instructions views
 const instructions = babeViews.instructions({
     trials: 1,
-    name: 'instrucions',
+    name: 'instructions',
     title: 'General Instructions',
-    text:  `This is a sample instructions view.
+    text:  `
             <br />
             <br />
-            Tell your participants what they are to do here.`,
+            In the following trials you will see two 3D figures next to each other.
+            Press the button 'F' if the two figures are the same.
+            Press the button 'J' if the two figures are different `,
     buttonText: 'go to trials'
 });
 
@@ -102,15 +101,14 @@ const thanks = babeViews.thanks({
 
 
 // Here, we initialize a forcedChoice view
-const forced_choice_2A = babeViews.forcedChoice({
+const key_press = babeViews.keyPress({
     // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-    trials: trial_info.forced_choice.length,
+    trials: trial_info.key_press.length,
     // name and trial_type should be identical to the variable name
-    name: 'forced_choice_2A',
-    trial_type: 'forced_choice_2A',
-    data: trial_info.forced_choice
+    name: 'key_press',
+    trial_type: 'key_press',
+    data: _.shuffle(trial_info.key_press)
 });
 
 // There are many more templates available:
 // forcedChoice, sliderRating, dropdownChoice, testboxInput, ratingScale, imageSelection, sentenceChoice, keyPress, selfPacedReading and selfPacedReading_ratingScale
-

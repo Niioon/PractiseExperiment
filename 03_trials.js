@@ -1,19 +1,71 @@
 // In this file you can specify the trial data for your experiment
-
+var q = "Are the two figures the same?"
 
 const trial_info = {
-    forced_choice: [
+    key_press: [
         {
-            question: "What's on the bread?",
-            picture: "images/question_mark_02.png",
-            option1: 'jam',
-            option2: 'ham'
+            question: q,
+            picture: "images/1_50_different.jpg",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'different',
+            rotation: 90,
+            number_of_picture: 1
+
         },
         {
-            question: "What's the weather like?",
-            picture: "images/weather.jpg",
-            option1: "shiny",
-            option2: "rainbow"
+            question: q,
+            picture: "images/2_50_different.jpg",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'different',
+            rotation: 90,
+            number_of_picture: 2
+
+        },
+        {
+            question: q,
+            picture: "images/3_50_same.jpg",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'same',
+            rotation: 90,
+            number_of_picture: 3
+
+
+
+        },
+        {
+            question: q,
+            picture: "images/4_50_same.jpg",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'same',
+            rotation: 90,
+            number_of_picture: 4
+
+
+        },
+        {
+            question: q,
+            picture: "images/5_50_different.jpg",
+            key1: 'f',
+            key2: 'j',
+            f: 'same',
+            j: 'different',
+            expected: 'different',
+            rotation: 90,
+            number_of_picture: 5
+
+
         }
     ]
 };
